@@ -1,0 +1,12 @@
+body {
+    h1{
+        color: brown;
+        background-color: rgb(194, 239, 120);
+    }
+    h2{
+        color: rgb(59, 51, 202);
+    }
+    p {
+        color: blueviolet;
+    }
+}
