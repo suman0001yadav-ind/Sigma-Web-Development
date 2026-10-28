@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faulty Calculator</title>
+</head>
+<body>
+    <h1>Faulty Calculator</h1>
+
+    <script>
+        let num1 = Number(prompt("Enter first number:"));
+        let num2 = Number(prompt("Enter second number:"));
+        let operator = prompt("Enter operator (+, -, *, /):");
+
+        let random = Math.random();
+        let result;
+
+        if (random < 0.1) {
+            // Wrong operation: 10% chance
+            switch (operator) {
+                case "+":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 / num2;
+                    break;
+                case "/":
+                    result = num1 ** num2;
+                    break;
+                default:
+                    alert("Invalid operator!");
+            }
+        } else {
+            // Correct operation: 90% chance
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default:
+                    alert("Invalid operator!");
+            }
+        }
+
+        if (result !== undefined) {
+            alert("Result: " + result);
+            console.log("Result:", result);
+        }
+    </script>
+</body>
+</html>
